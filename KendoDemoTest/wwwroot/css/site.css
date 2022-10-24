@@ -1,71 +1,330 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
 html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    color: #ffffff;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+
+header,
+footer,
+nav {
+    display: block;
+}
+
+section {
+    min-height: 100%;
+    clear: both;
+    height: inherit;
+    width: inherit;
+}
+
+a img {
+    border: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #000;
+}
+
+h1 {
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    padding: 0 0 10px 0;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+a {
+    color: #696969;
+}
+
+li {
+    line-height: 1.6;
+}
+
+/* this rule styles <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2 {
+    margin-top: 0;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page {
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    clear: both;
+    height: inherit;
+    width: inherit;
+}
+
+header, #header {
+    position: relative;
+    margin-bottom: 0px;
+    color: #000;
+    padding: 0;
+}
+
+    header h1, #header h1 {
+        font-weight: bold;
+        padding: 5px 0;
+        margin: 0;
+        color: #fff;
+        border: none;
+        line-height: 2em;
+        font-size: 32px !important;
+    }
+
+#main {
+    background: #FFFFFF;
+    padding: 1px 1px 1px 1px;
+    margin: 0px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscore */
+}
+
+footer, #footer {
+    color: #999;
+    padding: 10px 0;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+    font-size: .9em;
+}
+
+.k-menu .k-item > .k-link, .k-menu-scroll-wrapper .k-item > .k-link, .k-popups-wrapper .k-item > .k-link {
+    /*display: block;*/
+    /*padding: 0.5em 1.1em 0.4em;*/
+    line-height: 2.5em;
+    font-weight: bold;
+    /*-webkit-user-select: none;*/
+    /*-ms-user-select: none;*/
+    /*user-select: none;*/
+}
+
+/*.k-menu .k-item, .k-menu.k-header {
+    border-color: #fec21d;
+}*/
+
+.k-item .k-menu-item .k-state-default.k-state-hover {
+    color: #299eff !important;
+}
+
+
+/*.k-menu, .k-menu .k-group, .k-popup.k-widget.k-context-menu {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.9);
+        color: #000000;
+    background-color: #fbe7b0;
+    background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,0));
+    border: solid 1px #fbe7b0;
+    border: solid 1px #ffd151;
+    color: #000000;
+    background-color: #ffd151;
+    background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,0));
+}*/
+
+/*.k-autocomplete, .k-draghandle, .k-dropdown-wrap, .k-grid-header, .k-grouping-header, .k-header, .k-numeric-wrap, .k-panelbar .k-tabstrip-items .k-item, .k-picker-wrap, .k-progressbar, .k-state-highlight, .k-tabstrip-items .k-item, .k-toolbar {
+    background-color: #fbe7b0;
+    background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,0));
+}*/
+.k-tabstrip {
+    background-color: #18212b;
+    padding: 0px;
+}
+
+.k-splitter {
+    background-color: #17212b;
+}
+
+.k-splitbar {
+    color: #ffffff;
+    background-color: #17212b;
+}
+
+.k-toolbar {
+    /*border-color: rgba(0, 0, 0, 0.08);*/
+    /*color: #ffffff;*/
+    background-color: #17212b;
+    border: 0;
+}
+
+.k-grid,
+.k-grid-header-wrap,
+.k-grid-header th,
+.k-grid-content > table > tbody > tr > td {
+    /*border: 1px solid red;*/
+    border: 0;
+    font-size: 12px;
+}
+
+    .k-filter-row th, .k-grid-header th.k-header {
+        border: 0;
+    }
+
+    .k-grid .k-grouping-row {
+        background-color: #182633;
+    }
+
+.k-grid-pager {
+    border-width: 1px 0 0;
+    border-color: rgba(255,255,255, 0.1);
+    font-size: inherit;
+}
+
+.report-panel {
+    height: 100%;
+    /*padding: 16px 16px 16px 16px;*/
+}
+
+.report-title {
+    border-color: #17212b;
+    background-color: #17212b;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 15px 15px 5px;
+}
+
+.report-grid {
+    height: 100%;
+}
+
+.report-bottom {
+    height: 20px;
+}
+
+/*.k-window-titlebar {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-color: #ff8201;
+    color: #111111;
+    font-weight: 400;
+    background-color: #fbe7b0;
+    background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,0));
+}*/
+
+/*a.k-grid-filter.k-state-active {
+    color: #fff !important;
+    background-color: #ff6358 !important;
+}*/
+
+.k-grid-header th.k-header {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.k-menu-horizontal .k-menu-link {
+    border-width: 0 0 0 0;
+    border-style: solid;
+}
+
+.customtemplatewindow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+    .customtemplatewindow div {
+        width: 25%;
+    }
+
+.customtemplatewindowBODY {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow: auto;
+    justify-content: center;
+}
+
+.customtemplatewindowFOTTER {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    float: right;
+}
+
+    .customtemplatewindowFOTTER button {
+        margin: 10px;
+        width: 150px;
+        height: 27px;
+    }
+
+/*   .customtemplatewindowFOTTER button:is(:nth-child(1),:nth-child(2)) {
+        color: green;
+    }
+
+        .customtemplatewindowFOTTER button:is(:nth-child(3),:nth-child(4)) {
+            color: mediumvioletred;
+        }*/
+.mycard {
+    text-align: center;
+    width: 200px;
+    background-color: #f8a271;
+    margin: 10px;
+}
+
+    .mycard:hover {
+        background-color: #07c3c3;
+    }
+
+    .mycard:active {
+        background-color: #42acf3;
+    }
+
+    .mycard.active {
+        background-color: #42acf3;
+    }
+
+
+/*ul#menu li {
+    display:inline;
+}*/
+
+.ol-control button {
+    margin: 2px;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: #232f3d;
 }

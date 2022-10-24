@@ -1,0 +1,273 @@
+.ol-popup {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 0px;
+    border: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    bottom: 12px;
+    left: -150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 148px;
+    margin-left: -10px;
+}
+
+.ol-popup:before {
+    border-top-color: #CCCCCC;
+    border-width: 11px;
+    left: 148px;
+    margin-left: -11px;
+}
+
+.ol-popup-content {
+    min-width: 200px;
+    max-height: 250px;
+    overflow-x: auto;
+}
+
+.ol-popup-closer {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 150%;
+    padding: 0 4px;
+    color: gray;
+    text-decoration: none;
+}
+
+.ol-popup-closer:after {
+    content: "\2716";
+}
+
+.ol-popup div.infoResult {
+    min-width: 130px;
+}
+
+.ol-popup div.infoResult p {
+    padding: 0.1em;
+    margin: 0;
+}
+
+.ol-popup-content h3 {
+    margin: 0.25em 0;
+}
+
+.ol-popup.marker {
+    margin-bottom: 30px;
+}
+
+
+.info-window {
+    color: #333;
+    font-size: 12px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    min-width: 350px;
+    /*min-height:180px;*/
+}
+
+.info-window p {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.info-window-head {
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fff9e9), color-stop(1, #ffd151));
+    background: -moz-linear-gradient(top, #fff9e9 5%, #ffd151 100%);
+    background: -webkit-linear-gradient(top, #fff9e9 5%, #ffd151 100%);
+    background: -o-linear-gradient(top, #fff9e9 5%, #ffd151 100%);
+    background: -ms-linear-gradient(top, #fff9e9 5%, #ffd151 100%);
+    background: linear-gradient(to bottom, #fff9e9 5%, #ffd151 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff9e9', endColorstr='#ffd151',GradientType=0);*/
+    background-color: #ffd151;
+    background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,0));
+    /*border-bottom: solid 1px #ff8201;*/
+    vertical-align: middle;
+    color: #111111;
+    font-family: 'Open Sans', 'Droid Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    padding: 3px 3px 3px 10px;
+    height: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    padding-top: 10px;
+}
+
+/* DivTable.com */
+.divTable {
+    display: table;
+    width: 346px;
+    padding: 5px 6px 6px 6px;
+}
+
+.divTableRow {
+    display: table-row;
+}
+
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+}
+
+.divTableCell, .divTableHead, .divTableCell span {
+    /*border: 1px solid #999999;*/
+    /*height: 18px;*/
+    /*display: table-cell;*/
+    /*padding: 0;*/
+    float: left;
+    /*font-family: Tahoma,Helvetica,sans-serif;*/
+    /*font-family: 'Open Sans', 'Droid Sans', sans-serif;*/
+    font-size: 12px;
+}
+
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+    font-weight: bold;
+}
+
+.divTableFoot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+}
+
+.divTableBodyTop {
+    display: table-row-group;
+    background-color: #fff9e9;
+}
+
+.divTableBody {
+    display: table-row-group;
+    background-color: #EDEEEF;
+}
+
+.alarm-icon {
+    float: right;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px
+}
+
+.alarm-icon.alarm-icon-fire {
+    background-image: url('../../content/images/icons/icon-fire-24.png');
+}
+
+    .alarm-icon.alarm-icon-camera {
+        background-image: url('../../content/images/icons/camera-blue.png');
+    }
+
+.alarm-icon.alarm-icon-disconnected {
+    background-image: url('../../content/images/icons/camera-gray.png');
+}
+
+.alarm-icon.alarm-icon-connected {
+    background-image: url('../../content/images/icons/camera-gray.png');
+}
+
+.alarm-icon.resource-icon-trunuoc {
+    background-image: url('../../content/images/icons/hydrant-iconx32.png');
+}
+.alarm-icon.resource-icon-tramyte {
+    background-image: url('../../content/images/icons/red-cross-iconx32.png');
+}
+.alarm-icon.resource-icon-congan {
+    background-image: url('../../content/images/icons/army_officerx32.png');
+}
+.alarm-icon.alarm-icon-giaothong {
+    background-image: url('../../content/images/icons/icon-traffic.png');
+}
+    .alarm-icon.alarm-icon-anninh {
+        background-image: url('../../content/images/icons/icon-warning.png');
+    }
+.icon-phatnong {
+    background-image: url('../../content/images/icons/penalty-icon.png');
+}
+.icon-phatnguoi {
+    background-image: url('../../content/images/icons/cold-penalty.png');
+}
+
+    .type-icon {
+        float: left;
+        display: block;
+        width: 16px;
+        height: 16px;
+    }
+
+    .type-icon.type-icon-cctv {
+        background-image: url('../../content/images/icons/cctv.png');
+    }
+
+    .type-icon.type-icon-cctv-gray {
+        background-image: url('../../content/images/icons/icon-cctv-gray.png');
+    }
+
+    .type-icon.type-icon-cctv-green {
+        background-image: url('../../content/images/icons/icon-cctv-green.png');
+    }
+
+.stat-icon {
+    display: inline-block;
+    padding: .35em .65em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    height:12px;
+}
+
+.stat-icon.custom-color-red {
+    background: #ED3237;
+}
+
+.stat-icon.custom-color-red-orange {
+    background: #FC5130;
+}
+
+.stat-icon.custom-color-orange {
+    background: #FF7F11;
+}
+
+.stat-icon.custom-color-blue {
+    background: #167FFC;
+}
+
+.stat-icon.custom-color-green {
+    background: #55ce63 !important;
+}
+
+.stat-icon.custom-color-navy-blue {
+    background: #3E4095;
+}
+
+
+.stat-icon.custom-color-gray {
+    background: gray;
+}

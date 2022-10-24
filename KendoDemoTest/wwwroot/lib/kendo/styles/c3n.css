@@ -39679,7 +39679,7 @@ li div.k-animation-container{
 }
 
 .k-grid .k-state-selected, .k-grid .k-state-selected:hover {
-    background-color: var(--colorRowGridCustom) !important;
+   /*background-color: var(--colorRowGridCustom) !important;*/
     color: var(--whitecolorCustom) !important;
 }
 
@@ -39730,6 +39730,10 @@ li div.k-animation-container{
 #titleFolder .k-input {
     height:28px;
     width: 380px !important;
+}
+
+.k-grid .k-grid-search{
+    width:auto !important;
 }
 
 

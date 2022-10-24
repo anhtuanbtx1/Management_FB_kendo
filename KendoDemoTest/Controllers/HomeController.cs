@@ -33,5 +33,9 @@ namespace KendoDemoTest.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public ActionResult Tracking()
+        {
+            return PartialView("Tracking");
+        }
     }
 }

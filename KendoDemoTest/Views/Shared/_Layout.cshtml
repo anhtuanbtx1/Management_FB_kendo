@@ -4,52 +4,261 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - KendoDemoTest</title>
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link href="~/lib/kendo/styles/kendo.common.min.css" rel="stylesheet" />
-    <link href="~/lib/kendo/styles/kendo.rtl.min.css" rel="stylesheet" />
+    <link href="~/lib/kendo/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="~/lib/kendo/styles/kendo.rtl.min.css" rel="stylesheet">
+    <link href="~/lib/kendo/styles/kendo.default-main-dark.min.css" rel="stylesheet">
+    <link href="~/lib/kendo/styles/c3n.css" rel="stylesheet">
     <link href="~/lib/kendo/styles/kendo.default.mobile.min.css" rel="stylesheet">
     <script src="~/lib/kendo/js/jquery.min.js"></script>
     <script src="~/lib/kendo/js/jszip.min.js"></script>
     <script src="~/lib/kendo/js/kendo.all.min.js"></script>
-</head>
-<body>
-    <div id="example">
-        <div class="demo-section wide">
-            <nav id="stepper"></nav>
-        </div>
-    </div>
-    <main role="main">
-        @RenderBody()
+    <link href="~/css/site.css" rel="stylesheet" />
+    <style style="display:none">
 
-        <span id="notification" style="display:none;"></span>
-    </main>
-    <script>
-        $(document).ready(function () {
-            $("#stepper").kendoStepper({
-                linear: false,
-                steps: [{
-                    label: "Personal Info",
-                    icon: "user"
-                }, {
-                    label: "Education",
-                    icon: "dictionary-add",
-                    error: true
-                }, {
-                    label: "Experience",
-                    icon: "flip-vertical",
-                    selected: true
-                }, {
-                    label: "Attachments",
-                    icon: "attachment"
-                }, {
-                    label: "Review",
-                    icon: "preview",
-                    enabled: false
-                }, {
-                    label: "Submit",
-                    icon: "file-add"
-                }]
+        /*thanh kéo scroll*/
+        html {
+            --scrollbarBG: #232f3d; /*#CFD8DC*/
+            --thumbBG: #5f6164; /*#0271a9*/
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+
+        body {
+            scrollbar-width: thin;
+            scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--scrollbarBG) !important;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--thumbBG) !important;
+            border-radius: 10px !important;
+            border: 2px solid var(--scrollbarBG) !important;
+            background: none;
+        }
+    </style>
+</head>
+<body id="body">
+    <div id="header">
+        <div id="megaStore">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <a class="navbar-brand" href="/">
+                    <img src="/content/images/logo-new.png" style="width: 92px; padding: 10px; margin-left: 20px;">
+                    <p style="color: #f7b550;"> TRUNG TÂM THỂ THAO</p>
+                </a>
+                <ul id="menu2" style=" padding-right: 10px;  margin-right: 20px;">
+                    <li class="align-right" style="border-color: white;">
+                        <i class="k-icon k-i-notification" style="scale: 1.4;"></i>
+                    </li>
+                    <li class="align-right" style="border-color: white;">
+                        @*<i class="k-icon k-i-user"></i>*@
+                        <span id="pnAccount" style="font-size:14px;">&nbsp;</span>
+                        <ul style="background-color:var(--lightgrayCustom) !important;" class="ul-login">
+                            <li>
+                                <div style="background-color:var(--lightgrayCustom) !important;width:205px">
+                                    <ol">
+                                        <li>
+                                            <a style="background-color:var(--lightgrayCustom) !important;margin-right:57px;" class="k-button k-button-solid-base k-button-solid k-button-md k-rounded-md" href="#">
+                                                <span class="k-icon k-i-user"></span>
+                                                <div>Tài khoản</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a style="background-color:var(--lightgrayCustom) !important;margin-right:73px;" class="k-button k-button-solid-base k-button-solid k-button-md k-rounded-md" href="#">
+                                                <span class="k-icon k-i-gear"></span>
+                                                <div>Cài đặt</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a style="background-color:var(--lightgrayCustom) !important;margin-right:30px;" class="k-button k-button-solid-base k-button-solid k-button-md k-rounded-md change-password" href="#">
+                                                <span class="k-icon k-i-lock"></span>
+                                                <div>Đổi mật khẩu</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a style="background-color:var(--lightgrayCustom) !important;margin-right:45px;" class="k-button k-button-solid-base k-button-solid k-button-md k-rounded-md" href="/Account/Logout">
+                                                <span class="k-icon k-i-logout"></span>
+                                                <div>Đăng xuất</div>
+                                            </a>
+                                        </li>
+                                        </ol>
+                            @*<img src="../content/images/map.png" />*@
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <ul id="menu" style="font-size:14px; background-color: #232f3d;">
+                <li id="mniDashboard">
+                    <a href="/Dashboard" id="dashboard"><span class="k-icon k-i-graph"></span>Thống kê</a>
+                </li>
+                <li id="mniTrac">
+                    <a href="/"><span class="k-icon k-i-marker-pin-target"></span>Giám sát</a>
+                </li>
+                <li id="mniView">
+                    <a><span class="k-icon k-i-ungroup"></span>Hiển thị</a>
+                    <ul></ul>
+                </li>
+                <li id="mniPatrol">
+                    <a id="tuantra" onclick="onTuanTra()"><span class="k-icon k-i-calendar"></span>Tuần tra</a>
+                </li>
+                <li>
+                    <a id="news" onclick="onTaoTin()"><span class="k-icon k-i-warning"></span>Tạo tin mới</a>
+                </li>
+                <li id="mniViolate">
+                    <a href="/Violate/Violate" id="violate"><span class="k-icon k-i-launch"></span>Vi phạm</a>
+                </li>
+                <li id="mniReport">
+                    <a href="/Report" id="report"><span class="k-icon k-i-aggregate-fields"></span>Báo cáo</a>
+                    <ul class="ul-history" style="background-color:var(--lightgrayCustom);margin-top:11px">
+                        <li id="mniHistory">
+                            <a id='patrolsHistory' href='/Histories/PatrolsHistory'><span class="k-icon k-i-clock"></span>Lịch sử tuần tra</a>
+                        </li>
+                        <li id="">
+                            <a id='eventsHistory' href='/Histories/EventsHistory'><span class="k-icon k-i-clock"></span>Lịch sử sự kiện</a>
+                        </li>
+                        <li id="">
+                            <a id='violationsHistory' href='/Histories/ViolatesHistory'><span class="k-icon k-i-clock"></span>Lịch sử xử lý vi phạm</a>
+                        </li>
+                    @*<li>
+                        Demo Notification
+                        <ul>
+                        <li><a id="showEmailNotification">Email</a></li>
+                        <li><a id="showErrorNotification">Error</a></li>
+                        <li><a id="showSuccessNotification">Upload Success</a></li>
+                        <li><a id="hideAllNotifications">Hide All Notifications</a></li>
+                        </ul>
+                        </li>*@
+                    </ul>
+                </li>
+                <li style="display:none;">
+                    <a id="setting"><span class="k-icon k-i-cog"></span> Cài đặt</a>
+                    <ul>
+                        <li>
+                            <a id="settingView" onclick="onTaoView()"><span class="k-icon k-i-ungroup"></span>Thiết lập view</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <style>
+            #header {
+                /*background-image: linear-gradient(#ffffff, #ffbc00);*/
+                /*border-bottom-color: #9f9f9f;
+                                                                            border-bottom-style: solid;
+                                                                            border-bottom-width: 1px;*/
+            }
+
+            .navbar-brand {
+                align-items: center;
+                display: flex;
+                text-decoration: none;
+                font-size: 32px;
+                font-weight: 700;
+                /*color: #ff8a22;*/
+            }
+
+            #menu2 .k-i-arrow-60-down {
+                scale: 1.4;
+            }
+
+            #menu .btn .k-link {
+                padding: 0.45em 1em;
+            }
+
+            #menu .align-right {
+                float: right;
+            }
+
+            #megaStore {
+                /*border-bottom-color: #ff8201;*/
+                border-bottom-style: solid;
+                border-bottom-width: 0px;
+                background-color: #17212b;
+            }
+
+            #menu h2 {
+                font-size: 1em;
+                text-transform: uppercase;
+                padding: 5px 10px;
+            }
+
+            #template img {
+                margin: 5px 20px 0 0;
+                float: left;
+            }
+
+            #template {
+                width: 380px;
+            }
+
+                #template ol {
+                    float: left;
+                    margin: 0 0 0 30px;
+                    padding: 10px 10px 0 10px;
+                }
+
+                #template:after {
+                    content: ".";
+                    display: block;
+                    height: 0;
+                    clear: both;
+                    visibility: hidden;
+                }
+
+                #template .k-button {
+                    float: left;
+                    clear: left;
+                    margin: 5px 0 5px 12px;
+                }
+        </style>
+        <script>
+
+            $(document).ready(function () {
+                $("#menu").kendoMenu();
+                $("#menu2").kendoMenu();
+                //$("#menu").css("display", "block");
+                //$("#menu2").css("display", "block");
+                $("#kendomenu").kendoMenu({
+                    select: function (e) {
+                        $("#menu").find(".k-state-selected").removeClass("k-state-selected");
+                        $(e.item).addClass("k-state-selected");
+                    }
+                });
+
+                // lỗi màu xanh nhiều dòng
+                //$.each(
+                //    $("#menu").find(".k-link"),
+                //    function (i, data) {
+                //        if (data.href == location.href) {
+                //            $(data).addClass("k-state-selected");
+                //        }
+                //    }
+                //);
             });
+
+        </script>
+    </div>
+
+    <div id="example">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#menu").kendoMenu();
+            $("#menu2").kendoMenu();
+            $("#menu").css("display", "");
+            $("#menu2").css("display", "");
         });
     </script>
 </body>
