@@ -1,0 +1,604 @@
+﻿[
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 1,
+    "hour": 1
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 7,
+    "hour": 2
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 8,
+    "hour": 3
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 5,
+    "hour": 4
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 3,
+    "hour": 5
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 4,
+    "hour": 6
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 8,
+    "hour": 7
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 18,
+    "hour": 8
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 10,
+    "hour": 9
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 21,
+    "hour": 10
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 2,
+    "hour": 11
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 5,
+    "hour": 12
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 3,
+    "hour": 13
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 11,
+    "hour": 14
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 5,
+    "hour": 15
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 4,
+    "hour": 16
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 4,
+    "hour": 17
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 13,
+    "hour": 18
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 21,
+    "hour": 19
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 25,
+    "hour": 20
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 15,
+    "hour": 21
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 16,
+    "hour": 22
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 15,
+    "hour": 23
+  },
+  {
+    "name": "Vượt đèn đỏ",
+    "data": 21,
+    "hour": 24
+  },
+
+  {
+    "name": "Danh sách đen",
+    "data": 20,
+    "hour": 1
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 12,
+    "hour": 2
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 18,
+    "hour": 3
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 15,
+    "hour": 4
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 13,
+    "hour": 5
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 4,
+    "hour": 6
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 18,
+    "hour": 7
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 8,
+    "hour": 8
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 0,
+    "hour": 9
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 1,
+    "hour": 10
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 12,
+    "hour": 11
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 25,
+    "hour": 12
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 31,
+    "hour": 13
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 1,
+    "hour": 14
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 6,
+    "hour": 15
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 8,
+    "hour": 16
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 7,
+    "hour": 17
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 33,
+    "hour": 18
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 2,
+    "hour": 19
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 15,
+    "hour": 20
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 5,
+    "hour": 21
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 6,
+    "hour": 22
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 10,
+    "hour": 23
+  },
+  {
+    "name": "Danh sách đen",
+    "data": 2,
+    "hour": 24
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 2,
+    "hour": 1
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 2,
+    "hour": 2
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 8,
+    "hour": 3
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 5,
+    "hour": 4
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 3,
+    "hour": 5
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 14,
+    "hour": 6
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 8,
+    "hour": 7
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 18,
+    "hour": 8
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 10,
+    "hour": 9
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 1,
+    "hour": 10
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 22,
+    "hour": 11
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 2,
+    "hour": 12
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 1,
+    "hour": 13
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 11,
+    "hour": 14
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 16,
+    "hour": 15
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 18,
+    "hour": 16
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 17,
+    "hour": 17
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 23,
+    "hour": 18
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 22,
+    "hour": 19
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 15,
+    "hour": 20
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 4,
+    "hour": 21
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 8,
+    "hour": 22
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 1,
+    "hour": 23
+  },
+  {
+    "name": "Đậu đỗ sai",
+    "data": 21,
+    "hour": 24
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 9,
+    "hour": 1
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 9,
+    "hour": 2
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 9,
+    "hour": 3
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 9,
+    "hour": 4
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 4,
+    "hour": 5
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 5,
+    "hour": 6
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 4,
+    "hour": 7
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 7,
+    "hour": 8
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 0,
+    "hour": 9
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 5,
+    "hour": 10
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 6,
+    "hour": 11
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 0,
+    "hour": 12
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 1,
+    "hour": 13
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 1,
+    "hour": 14
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 6,
+    "hour": 15
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 1,
+    "hour": 16
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 5,
+    "hour": 17
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 3,
+    "hour": 18
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 4,
+    "hour": 19
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 5,
+    "hour": 20
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 1,
+    "hour": 21
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 6,
+    "hour": 22
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 1,
+    "hour": 23
+  },
+  {
+    "name": "Vượt quá tốc độ",
+    "data": 2,
+    "hour": 24
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 29,
+    "hour": 1
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 19,
+    "hour": 2
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 29,
+    "hour": 3
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 29,
+    "hour": 4
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 24,
+    "hour": 5
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 25,
+    "hour": 6
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 24,
+    "hour": 7
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 17,
+    "hour": 8
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 10,
+    "hour": 9
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 21,
+    "hour": 10
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 2,
+    "hour": 11
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 15,
+    "hour": 12
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 16,
+    "hour": 13
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 11,
+    "hour": 14
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 26,
+    "hour": 15
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 12,
+    "hour": 16
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 15,
+    "hour": 17
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 13,
+    "hour": 18
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 16,
+    "hour": 19
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 18,
+    "hour": 20
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 11,
+    "hour": 21
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 24,
+    "hour": 22
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 12,
+    "hour": 23
+  },
+  {
+    "name": "Chạy sai làn đường",
+    "data": 23,
+    "hour": 24
+  }
+
+]

@@ -1,6 +1,10 @@
+using Core_Db.Domains;
+using Core_Db.Interface;
+using Core_Db.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,6 +27,8 @@ namespace KendoDemoTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            ConfigurationRepositoryAndUnitOfWorkSettings(services);
+            ConfigurationDatabaseSettings(services);
             services.AddControllersWithViews();
         }
 
@@ -52,6 +58,19 @@ namespace KendoDemoTest
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private void ConfigurationDatabaseSettings(IServiceCollection services)
+        {
+            // Default ConnectionString 
+            var AMConnectionString = Configuration.GetConnectionString("PSAFE-ACCOUNTMANAGEMENT");
+            services.AddDbContext<footballContext>(options => options.UseNpgsql(AMConnectionString));
+
+        }
+
+        private void ConfigurationRepositoryAndUnitOfWorkSettings(IServiceCollection services)
+        {
+            services.AddScoped<IUserRepository, UserRepository>();
         }
     }
 }

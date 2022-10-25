@@ -1,0 +1,30 @@
+﻿<div class='customtemplatewindow'>
+    <div>
+        <label for='categories'>Lịch tuần tra:</label>
+        <input id='patrolList' />
+    </div>
+    <div>Thời gian: <strong id='time'>15:40-15:45</strong> </div>
+    <div><strong id='type'>T/Tra theo tuyến</strong> </div>
+    <div>Trạng thái: <strong id='status'></strong></div>
+</div>
+<div class='customtemplatewindowBODY'>
+    <a class='k-card mycard' style=''>
+        <div class='k-card-body'>
+            <h6 class='k-card-subtitle' style='color:white;opacity: 1;'>1</h6>
+            <h5 class='k-card-title'>Bien so Nguoc chieu Lan lan</h5>
+        </div>
+        <div class='k-card-actions k-card-actions-center'>
+            <span class='k-icon k-icon k-i-photo-camera' style='color:white;'></span>
+            <input type='hidden' readonly='readonly' id='locationId' value='Bien so Nguoc chieu Lan lan'>
+            <input type='hidden' readonly='readonly' id='deviceId' value='59'>
+            <input type='hidden' readonly='readonly' id='cameraName' value='Bien so Nguoc chieu Lan lan'>
+            <input type='hidden' readonly='readonly' id='areaId' value='59' />
+        </div>
+    </a>
+</div>
+<div class='customtemplatewindowFOTTER'>
+    <button id='nextCam' class='k-fab k-fab-success k-primary'>Bắt đầu tuần tra</button>
+    <button id='stopPatrol' class='k-fab k-fab-tertiary k-primary'>Tạm dừng</button>
+    <button id='createSOS' class='k-fab k-fab-error k-primary'> Tạo sự kiện</button>
+    <button id='finishPatrol' class='k-fab k-fab-primary k-primary'>Hoàn thành tuần tra</button>
+</div>

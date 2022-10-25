@@ -1,0 +1,82 @@
+﻿[
+  {
+    "country": "Mạc Cửu",
+    "REDLIGHT_VIOLATION": 58,
+    "PARKING_VIOLATION": 2,
+    "OVER_SPEED": 23,
+    "BLACK_LIST": 1,
+    "LANE_VIOLATION": 16
+  },
+  {
+    "country": "Lý Thường Kiệt",
+    "REDLIGHT_VIOLATION": 278,
+    "PARKING_VIOLATION": 162,
+    "OVER_SPEED": 98,
+    "BLACK_LIST": 10,
+    "LANE_VIOLATION": 25
+  },
+  {
+    "country": "Võ Thị Sáu",
+    "REDLIGHT_VIOLATION": 278,
+    "PARKING_VIOLATION": 111,
+    "OVER_SPEED": 123,
+    "BLACK_LIST": 12,
+    "LANE_VIOLATION": 41
+  },
+  {
+    "country": "Lý Thái Tổ",
+    "REDLIGHT_VIOLATION": 95,
+    "PARKING_VIOLATION": 111,
+    "OVER_SPEED": 149,
+    "BLACK_LIST": 114,
+    "LANE_VIOLATION": 98
+  },
+  {
+    "country": "Nguyễn Trãi",
+    "REDLIGHT_VIOLATION": 35,
+    "PARKING_VIOLATION": 141,
+    "OVER_SPEED": 20,
+    "BLACK_LIST": 10,
+    "LANE_VIOLATION": 0
+  },
+  {
+    "country": "Mạc Khuyến",
+    "REDLIGHT_VIOLATION": 558,
+    "PARKING_VIOLATION": 2,
+    "OVER_SPEED": 323,
+    "BLACK_LIST": 30,
+    "LANE_VIOLATION": 16
+  },
+  {
+    "country": "Lý Tự Trọng",
+    "REDLIGHT_VIOLATION": 178,
+    "PARKING_VIOLATION": 212,
+    "OVER_SPEED": 18,
+    "BLACK_LIST": 10,
+    "LANE_VIOLATION": 125
+  },
+  {
+    "country": "Cửu Long",
+    "REDLIGHT_VIOLATION": 78,
+    "PARKING_VIOLATION": 111,
+    "OVER_SPEED": 153,
+    "BLACK_LIST": 12,
+    "LANE_VIOLATION": 41
+  },
+  {
+    "country": "Lý Chính Thắng",
+    "REDLIGHT_VIOLATION": 225,
+    "PARKING_VIOLATION": 121,
+    "OVER_SPEED": 50,
+    "BLACK_LIST": 14,
+    "LANE_VIOLATION": 78
+  },
+  {
+    "country": "Nguyễn Huệ",
+    "REDLIGHT_VIOLATION": 195,
+    "PARKING_VIOLATION": 141,
+    "OVER_SPEED": 120,
+    "BLACK_LIST": 150,
+    "LANE_VIOLATION": 58
+  }
+]

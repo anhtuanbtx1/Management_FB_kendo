@@ -1,0 +1,15 @@
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\bin\Debug\net5.0\Core_Db.deps.json
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\bin\Debug\net5.0\Core_Db.dll
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\bin\Debug\net5.0\Core_Db.pdb
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\obj\Debug\net5.0\Core_Db.csproj.AssemblyReference.cache
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\obj\Debug\net5.0\Core_Db.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\obj\Debug\net5.0\Core_Db.AssemblyInfoInputs.cache
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\obj\Debug\net5.0\Core_Db.AssemblyInfo.cs
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\obj\Debug\net5.0\Core_Db.csproj.CoreCompileInputs.cache
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\obj\Debug\net5.0\Core_Db.dll
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\obj\Debug\net5.0\refint\Core_Db.dll
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\obj\Debug\net5.0\Core_Db.pdb
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\obj\Debug\net5.0\ref\Core_Db.dll
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\bin\Debug\net5.0\Core_Db.runtimeconfig.json
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\bin\Debug\net5.0\Core_Db.runtimeconfig.dev.json
+D:\repos\MFootBall\Kendo_Football\Management_FB_kendo\Core_Db\obj\Debug\net5.0\Core_Db.genruntimeconfig.cache
