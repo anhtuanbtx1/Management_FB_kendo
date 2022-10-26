@@ -39743,3 +39743,44 @@ li div.k-animation-container{
 #gridRelatedDiary .k-grid-content table tbody tr td {
     font-size: 13px;
 }
+.stat-icon {
+    display: inline-block;
+    padding: .35em .65em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    height: 12px;
+}
+
+    .stat-icon.custom-color-red {
+        background: #ED3237;
+    }
+
+    .stat-icon.custom-color-red-orange {
+        background: #FC5130;
+    }
+
+    .stat-icon.custom-color-orange {
+        background: #FF7F11;
+    }
+
+    .stat-icon.custom-color-blue {
+        background: #167FFC;
+    }
+
+    .stat-icon.custom-color-green {
+        background: #55ce63 !important;
+    }
+
+    .stat-icon.custom-color-navy-blue {
+        background: #3E4095;
+    }
+
+
+    .stat-icon.custom-color-gray {
+        background: gray;
+    }

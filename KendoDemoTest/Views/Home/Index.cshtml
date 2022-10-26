@@ -5,7 +5,7 @@
 <div id="vertical">
     <div id="middle-pane">
         <div id="horizontal" style="height: 100%; width: 100%;">
-            <div id="left-pane" style="height: 100%;"></div>
+           @* <div id="left-pane" style="height: 100%;"></div>*@
             <div id="right-pane" >
                 <div id="alarmGrid" style="width: 100%; height: 100%; position: absolute; z-index: 1"></div>
             </div>
@@ -189,127 +189,104 @@
         resizeSplitter();
         browserWindow.resize(resizeSplitter);
 
-        $("#horizontal").kendoSplitter({
-            panes: [
-                { collapsible: true, resizable: true, scrollable: false, size: "210px", min: "290px", max: "500px", contentUrl: "@Url.Content("~/Home/Tracking")" },
-                { collapsible: false, size: "100%", scrollable: true }
-            ]
-        });
+        //$("#horizontal").kendoSplitter({
+        //    panes: [
+        //        { collapsible: true, resizable: true, scrollable: false, size: "210px", min: "290px", max: "500px", contentUrl: "@Url.Content("~/Home/Tracking")" },
+        //        { collapsible: false, size: "100%", scrollable: true }
+        //    ]
+        //});
 
     });
 
 </script>
 
 <script>
-    $(document).ready(function () {
-        var crudServiceBaseUrl = "https://demos.telerik.com/kendo-ui/service",
-            dataSource = new kendo.data.DataSource({
-                transport: {
-                    read: {
-                        url: crudServiceBaseUrl + "/detailproducts",
-                        dataType: "jsonp"
-                    },
-                    update: {
-                        url: crudServiceBaseUrl + "/detailproducts/Update",
-                        dataType: "jsonp"
-                    },
-                    parameterMap: function (options, operation) {
-                        if (operation !== "read" && options.models) {
-                            return { models: kendo.stringify(options.models) };
-                        }
-                    }
-                },
-                batch: true,
-                pageSize: 20,
-                autoSync: true,
-                aggregate: [{
-                    field: "TotalSales",
-                    aggregate: "sum"
-                }],
-                schema: {
-                    model: {
-                        id: "ProductID",
-                        fields: {
-                            ProductID: { editable: false, nullable: true },
-                            Discontinued: { type: "boolean", editable: false },
-                            TotalSales: { type: "number", editable: false },
-                            TargetSales: { type: "number", editable: false },
-                            LastSupply: { type: "date" },
-                            UnitPrice: { type: "number" },
-                            UnitsInStock: { type: "number" },
-                            Category: {
-                                defaultValue: {
-                                    CategoryID: 8,
-                                    CategoryName: "Seafood"
-                                }
-                            },
-                            Country: {
-                                defaultValue: {
-                                    CountryNameLong: "Bulgaria",
-                                    CountryNameShort: "bg"
-                                }
+    IgetVehicleNumberHistory = async () => {
+
+        let data = await $.ajax({
+            url: "/User/GetUser",
+            dataType: "json"
+        })
+        if(data)
+        {
+            $("#alarmGrid").kendoGrid({
+                dataSource: {
+                    data: data,
+                    schema: {
+                        model: {
+                            id: "Id",
+                            fields: {
+                                name: {type: "string"},
+                                face: { type: "string" },
+                                club: { type: "string"},
+                                number: { type: "number" },
+                                rating: { type: "number" },
+                                country: { type: "string" }
                             }
                         }
                     }
+                },
+                columnMenu: {
+                    filterable: false
+                },
+                //editable: "incell",
+                pageable: true,
+                sortable: true,
+                //navigatable: true,
+                resizable: true,
+                reorderable: true,
+                groupable: true,
+                filterable: true,
+                dataBound: onDataBound,
+                toolbar: ["excel", "pdf", "search"],
+                columns: [{
+                    field: "name",
+                    title: "Tên cầu thủ",
+                    headerAttributes: { style: "text-align: center; justify-content: center" },
+                    attributes: { style: 'text-align: center;font-size: 16px' },
+                    width: 105,
+                },
+                {
+                    field: "face",
+                    title: "Khuôn mặt",
+                    headerAttributes: { style: "text-align: center; justify-content: center" },
+                    template: "<div class='k-text-center'><img src='../content/face/#: data.name#.png' alt='#: data.name#' title='#: data.name#' width='50' /></div>",
+                    width: 130
+                },
+                {
+                    field: "number",
+                    title: "Số áo",
+                    headerAttributes: { style: "text-align: center; justify-content: center" },
+                    attributes: { style: 'text-align: center;font-size: 16px' },
+                    template: "<span id='badge_#=club#' class='stat-icon custom-color-red' style='margin-right:5px'>#: data.number#</span>",
+                    width: 105
+                },
+                {
+                    field: "country",
+                    title: "Country",
+                    headerAttributes: { style: "text-align: center; justify-content: center" },
+                    attributes: { style: 'text-align: center' },
+                    template: "<div class='k-text-center'><img src='../content/flag/#: data.country#.png' alt='#: data.country#' title='#: data.country#' width='50' /></div>",
+                    width: 120
+                },
+                {
+                    field: "rating",
+                    title: "Skill",
+                    headerAttributes: { style: "text-align: center; justify-content: center" },
+                    template: "<input id='rating_#=rating#' data-bind='value: rating' class='rating'/>",
+                    editable: returnFalse,
+                    width: 140,
+                },
+                {
+                    field: "club",
+                    title: "Câu lạc bộ",
+                    headerAttributes: { style: "text-align: center; justify-content: center" },
+                    template: "<span id='badge_#=club#' class='stat-icon custom-color-red' style='margin-right:5px'>#: data.club#</span>",
+                    width: 300
                 }
+                ],
             });
-
-        $("#alarmGrid").kendoGrid({
-            dataSource: dataSource,
-            columnMenu: {
-                filterable: false
-            },
-            height: 650,
-            //editable: "incell",
-            pageable: true,
-            sortable: true,
-            navigatable: true,
-            resizable: true,
-            reorderable: true,
-            groupable: true,
-            filterable: true,
-            dataBound: onDataBound,
-            toolbar: ["excel", "pdf", "search"],
-            columns: [{
-                field: "ProductName",
-                title: "Product Name",
-                template: "<div class='product-photo' style='background-image: url(../content/web/foods/#:data.ProductID#.jpg);'></div><div class='product-name'>#: ProductName #</div>",
-                width: 200
-            },{
-                field: "Discontinued",
-                title: "In Stock",
-                template: "<span id='badge_#=ProductID#' class='badgeTemplate'></span>",
-                width: 130,
-            }, {
-                field: "Category.CategoryName",
-                title: "Category",
-                editor: clientCategoryEditor,
-                groupHeaderTemplate: "Category: #=data.value#, Total Sales: #=kendo.format('{0:c}', aggregates.TotalSales.sum)#",
-                width: 125
-            }, {
-                field: "CustomerRating",
-                title: "Rating",
-                template: "<input id='rating_#=ProductID#' data-bind='value: CustomerRating' class='rating'/>",
-                editable: returnFalse,
-                width: 160
-            }, {
-                field: "Country.CountryNameLong",
-                title: "Country",
-                template: "<div class='k-text-center'><img src='../content/flag/Brazil.png' alt='#: data.Country.CountryNameLong#' title='#: data.Country.CountryNameLong#' width='30' /></div>",
-                width: 120
-            }, {
-                field: "UnitsInStock",
-                title: "Units",
-                width: 105
-            }, {
-                field: "TotalSales",
-                title: "Total Sales",
-                format: "{0:c}",
-                width: 140,
-                aggregates: ["sum"],
-            }],
-        });
-    });
+        }
 
     function onDataBound(e) {
         var grid = this;
@@ -379,43 +356,8 @@
     function returnFalse() {
         return false;
     }
-
-    function clientCategoryEditor(container, options) {
-        $('<input required name="Category">')
-            .appendTo(container)
-            .kendoDropDownList({
-                autoBind: false,
-                dataTextField: "CategoryName",
-                dataValueField: "CategoryID",
-                dataSource: {
-                    data: categories
-                }
-            });
     }
+    IgetVehicleNumberHistory();
 
-    var categories = [{
-        "CategoryID": 1,
-        "CategoryName": "Beverages"
-    }, {
-        "CategoryID": 2,
-        "CategoryName": "Condiments"
-    }, {
-        "CategoryID": 3,
-        "CategoryName": "Confections"
-    }, {
-        "CategoryID": 4,
-        "CategoryName": "Dairy Products"
-    }, {
-        "CategoryID": 5,
-        "CategoryName": "Grains/Cereals"
-    }, {
-        "CategoryID": 6,
-        "CategoryName": "Meat/Poultry"
-    }, {
-        "CategoryID": 7,
-        "CategoryName": "Produce"
-    }, {
-        "CategoryID": 8,
-        "CategoryName": "Seafood"
-    }];
 </script>
+

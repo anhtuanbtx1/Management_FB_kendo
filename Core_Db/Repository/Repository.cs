@@ -5,7 +5,6 @@ using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 
 using PSafe.Core.SharedKernel;
-using PSafe.Infrastructure.Data;
 
 namespace PSafe.Infrastructure.Repository
 {
