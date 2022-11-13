@@ -1,22 +1,174 @@
 ﻿[
   {
-    "category": "Khu vực Quận 1",
-    "value": 20
+    "description": "Johan Cruyff | Ajax",
+    "date": "1971-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1971",
+    "images": [
+      {
+        "src": "../content/face/cruyff.png"
+      }
+    ]
   },
   {
-    "category": "Khu vực Quận 2",
-    "value": 30
+    "description": "Johan Cruyff | Ajax",
+    "date": "1973-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1973",
+    "images": [
+      {
+        "src": "../content/face/cruyff.png"
+      }
+    ]
   },
   {
-    "category": "Khu vực Quận 3",
-    "value": 10
+    "description": "Johan Cruyff | Barcelona",
+    "date": "1974-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1974",
+    "images": [
+      {
+        "src": "../content/face/cruyff.png"
+      }
+    ]
   },
   {
-    "category": "Khu vực Quận 5",
-    "value": 10
+    "description": "Ruud Gullit | AC Milan",
+    "date": "1987-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1987",
+    "images": [
+      {
+        "src": "../content/face/guillit.png"
+      }
+    ]
   },
   {
-    "category": "Khu vực Quận 7",
-    "value": 30
+    "description": "Basten | AC Milan",
+    "date": "1988-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1988",
+    "images": [
+      {
+        "src": "../content/face/basten.png"
+      }
+    ]
+  },
+  {
+    "description": "Basten | AC Milan",
+    "date": "1989-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1989",
+    "images": [
+      {
+        "src": "../content/face/basten.png"
+      }
+    ]
+  },
+  {
+    "description": "Matthaus | AC Milan",
+    "date": "1990-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1990",
+    "images": [
+      {
+        "src": "../content/face/matthaus.png"
+      }
+    ]
+  },
+  {
+    "description": "Jean-Pierre Papin | AC Milan",
+    "date": "1991-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1991",
+    "images": [
+      {
+        "src": "../content/face/guillit.png"
+      }
+    ]
+  },
+  {
+    "description": "Basten | AC Milan",
+    "date": "1992-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1992",
+    "images": [
+      {
+        "src": "../content/face/basten.png"
+      }
+    ]
+  },
+  {
+    "description": "Roberto Baggio | Juventus",
+    "date": "1993-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1993",
+    "images": [
+      {
+        "src": "../content/face/guillit.png"
+      }
+    ]
+  },
+  {
+    "description": "Stoichkov | Barcelona",
+    "date": "1994-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1994",
+    "images": [
+      {
+        "src": "../content/face/stoichkov.png"
+      }
+    ]
+  },
+  {
+    "description": "Weah | AC Milan",
+    "date": "1995-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1994",
+    "images": [
+      {
+        "src": "../content/face/weah.png"
+      }
+    ]
+  },
+  {
+    "description": "Matthias Sammer | Borussia Dortmund",
+    "date": "1996-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1994",
+    "images": [
+      {
+        "src": "../content/face/sammer.png"
+      }
+    ]
+  },
+  {
+    "description": "Ronaldo | Inter Milan",
+    "date": "1997-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1997",
+    "images": [
+      {
+        "src": "../content/face/ronaldo9.png"
+      }
+    ]
+  },
+  {
+    "description": "Zinedine Zidane | Juventus",
+    "date": "1998-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1998",
+    "images": [
+      {
+        "src": "../content/face/zidane.png"
+      }
+    ]
+  }
+  ,
+  {
+    "description": "Rivaldo | Barcelona",
+    "date": "1999-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 1999",
+    "images": [
+      {
+        "src": "../content/face/rivaldo.png"
+      }
+    ]
+  } 
+  ,
+  {
+    "description": "Luís Figo | Real Madrid",
+    "date": "2000-05-24T22:00:00.000Z",
+    "title": "Quả bóng vàng 2000",
+    "images": [
+      {
+        "src": "../content/face/figo.png"
+      }
+    ]
   }
 ]

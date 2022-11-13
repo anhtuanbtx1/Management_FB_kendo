@@ -202,41 +202,50 @@
 
 <script>
     IgetVehicleNumberHistory = async () => {
-
-        let data = await $.ajax({
-            url: "/User/GetUser",
-            dataType: "json"
-        })
-        if(data)
-        {
+        let trackdataSource = new kendo.data.DataSource({
+            transport: {
+            read: {
+                url: "/User/GetUser",
+                datatype: "json",
+            }
+            },
+            schema: {
+            model: {
+                id: "id",
+                fields: {
+                    id: { type: "number" },
+                    name: { type: "string" },
+                    face: { type: "string" },
+                    club: { type: "string" },
+                    number: { type: "number" },
+                    rating: { type: "number" },
+                    country: { type: "string" },
+                    status: { type: "number" }
+                }
+            }
+        },
+            pageSize: 7
+        });
+       
+       
             $("#alarmGrid").kendoGrid({
-                dataSource: {
-                    data: data,
-                    schema: {
-                        model: {
-                            id: "Id",
-                            fields: {
-                                name: {type: "string"},
-                                face: { type: "string" },
-                                club: { type: "string"},
-                                number: { type: "number" },
-                                rating: { type: "number" },
-                                country: { type: "string" }
-                            }
-                        }
-                    }
-                },
-                columnMenu: {
-                    filterable: false
-                },
+                dataSource: trackdataSource,
+                //columnMenu: {
+                //    filterable: false
+                //},
                 //editable: "incell",
-                pageable: true,
+            pageable: {
+                messages: {
+                    display: "{0}-{1} của {2} dòng",
+                },
+                pageSizes: [10, 20, 50],
+            },
                 sortable: true,
                 //navigatable: true,
                 resizable: true,
                 reorderable: true,
                 groupable: true,
-                filterable: true,
+                //filterable: true,
                 dataBound: onDataBound,
                 toolbar: ["excel", "pdf", "search"],
                 columns: [{
@@ -258,43 +267,52 @@
                     title: "Số áo",
                     headerAttributes: { style: "text-align: center; justify-content: center" },
                     attributes: { style: 'text-align: center;font-size: 16px' },
-                    template: "<span id='badge_#=club#' class='stat-icon custom-color-red' style='margin-right:5px'>#: data.number#</span>",
-                    width: 105
+                    //template: "<span id='badge_#=club#' class='stat-icon custom-color-red' style='margin-right:5px'>#: data.number#</span>",
+                    width: 110
                 },
                 {
                     field: "country",
-                    title: "Country",
+                    title: "Quốc tịch",
                     headerAttributes: { style: "text-align: center; justify-content: center" },
                     attributes: { style: 'text-align: center' },
-                    template: "<div class='k-text-center'><img src='../content/flag/#: data.country#.png' alt='#: data.country#' title='#: data.country#' width='50' /></div>",
-                    width: 120
+                    template: "<div class='k-text-center'><img src='../content/flag/#: data.country#.png' title='#: data.country#' width='50' /></div>",
+                    width: 140
                 },
                 {
                     field: "rating",
-                    title: "Skill",
+                    title: "Kỹ năng",
                     headerAttributes: { style: "text-align: center; justify-content: center" },
                     template: "<input id='rating_#=rating#' data-bind='value: rating' class='rating'/>",
                     editable: returnFalse,
-                    width: 140,
+                    width: 180,
                 },
+            {
+                field: "status",
+                title: "Danh tiếng",
+                headerAttributes: { style: "text-align: center; justify-content: center" },
+                //template: "<span id='badge_#=club#' class='stat-icon custom-color-red' style='margin-right:5px'>#: data.club#</span>",
+                width: 130
+            },
                 {
                     field: "club",
                     title: "Câu lạc bộ",
                     headerAttributes: { style: "text-align: center; justify-content: center" },
-                    template: "<span id='badge_#=club#' class='stat-icon custom-color-red' style='margin-right:5px'>#: data.club#</span>",
-                    width: 300
+                    //template: "<span id='badge_#=club#' class='stat-icon custom-color-red' style='margin-right:5px'>#: data.club#</span>",
+                    width: 170
                 }
                 ],
             });
-        }
 
     function onDataBound(e) {
         var grid = this;
         grid.table.find("tr").each(function () {
+            debugger
             var dataItem = grid.dataItem(this);
             var themeColor = dataItem.Discontinued ? 'success' : 'error';
             var text = dataItem.Discontinued ? 'available' : 'not available';
 
+                ShowCLBIcon(trackdataSource.data());
+            
             $(this).find(".badgeTemplate").kendoBadge({
                 themeColor: themeColor,
                 text: text,
@@ -307,55 +325,155 @@
                 selection: "continuous"
             });
 
-            $(this).find(".sparkline-chart").kendoSparkline({
-                legend: {
-                    visible: false
-                },
-                data: [dataItem.TargetSales],
-                type: "bar",
-                chartArea: {
-                    margin: 0,
-                    width: 180,
-                    background: "transparent"
-                },
-                seriesDefaults: {
-                    labels: {
-                        visible: true,
-                        format: '{0}%',
-                        background: 'none'
-                    }
-                },
-                categoryAxis: {
-                    majorGridLines: {
-                        visible: false
-                    },
-                    majorTicks: {
-                        visible: false
-                    }
-                },
-                valueAxis: {
-                    type: "numeric",
-                    min: 0,
-                    max: 130,
-                    visible: false,
-                    labels: {
-                        visible: false
-                    },
-                    minorTicks: { visible: false },
-                    majorGridLines: { visible: false }
-                },
-                tooltip: {
-                    visible: false
-                }
-            });
+ 
 
             kendo.bind($(this), dataItem);
         });
     }
 
+
+        function ShowCLBIcon(data) {
+            for (let i = 0; i < data.length; i++) {
+                let item = data[i];
+                row = $("#alarmGrid").data("kendoGrid").tbody.find("tr[data-uid='" + item.uid + "']");
+
+                let gcell2 = row.find("td").eq(2);
+                let html2 = GetNumberColor(item);
+                gcell2.html(html2);
+
+                let gcell4 = row.find("td").eq(4);
+                gcell4.css("text-align", "center");
+
+                let gcell5 = row.find("td").eq(5);
+                gcell5.css("text-align","center");
+                let html5 = GetStatusDefine(item);
+                gcell5.html(html5);
+
+                let gcell6 = row.find("td").eq(6);
+                let html6 = GetTypeStyle(item);
+                gcell6.html(html6);
+            }
+
+           
+           
+        }
+
     function returnFalse() {
         return false;
     }
+
+        function GetNumberColor(item) {
+            let strhtml1 = "";
+           let number = item.number;
+            if (number == 7 || number == 10 || number == 11 || number == 9 || number == 20) {
+                strhtml1 = "<span id='badge_" + item.name + "' class='stat-icon custom-color-red' style='margin-right:5px'>" + number + "</span>";
+           }
+            if (number == 8 || number == 17 || number == 34 || number == 13 || number == 16 || number == 22) {
+                strhtml1 = "<span id='badge_" + item.name + "' class='stat-icon custom-color-green' style='margin-right:5px'>" + number + "</span>";
+            }
+            if (number == 1) {
+                strhtml1 = "<span id='badge_" + item.name + "' class='stat-icon custom-color-yellow' style='margin-right:5px'>" + number + "</span>";
+            }
+            if (number == 2 || number == 3 || number == 4 || number == 5) {
+                strhtml1 = "<span id='badge_" + item.name + "' class='stat-icon custom-color-blue' style='margin-right:5px'>" + number + "</span>";
+            }
+            return strhtml1;
+        }
+
+        function GetStatusDefine(item) {
+            let strhtml = "";
+            let clubs = item.status;
+                let css = "";
+                if (clubs === 0) {
+                    css = "src='../content/club/normal.png'";
+                }
+            if (clubs === 1) {
+                css = "src='../content/club/supers.png'";
+            }
+                if (clubs === 2) {
+                    css = "src='../content/club/legend.png'";
+                }
+                strhtml += "<span style='margin-right:5px'><img class='k-text-center' " + css + " width='40' /></span>";
+                //  strhtml += "<span " + css + " style='margin-right:5px'>" + clubs[i].trim() + "</span>";
+            
+            return strhtml;
+        }
+
+        function GetTypeStyle(item)
+        {
+            let strhtml = "";
+            let clubs = item.club.trim().toString().split("|");
+              for (let i = 0; i < clubs.length; i++) {
+                let css = "";
+                if (clubs[i].trim() === "Manchester United") {
+                    css = "src='../content/club/mu.png'";
+                }
+                if (clubs[i].trim() === "None") {
+                    css = "src='../content/club/none.png'";
+                }
+                if (clubs[i].trim() === "Manchester City") {
+                    css = "src='../content/club/mc.png'";
+                }
+                if (clubs[i].trim() === "Tottenham") {
+                    css = "src='../content/club/tot.png'";
+                }
+                if (clubs[i].trim() === "Liverpool") {
+                    css = "src='../content/club/liv.png'";
+                }
+                if (clubs[i].trim() === "Real madrid") {
+                    css = "src='../content/club/real.png'";
+                }
+                if (clubs[i].trim() === "Chelsea") {
+                         css = "src='../content/club/chel.png'";
+                }
+                if (clubs[i].trim() === "Barcelona") {
+                    css = "src='../content/club/barca.png'";
+                }
+                if (clubs[i].trim() === "Arsenal") {
+                   css = "src='../content/club/ars.png'";
+                }
+                if (clubs[i].trim() === "Dortmund") {
+                    css = "src='../content/club/dortmund.png'";
+                }
+                if (clubs[i].trim() === "AC Milan") {
+                    css = "src='../content/club/ac.png'";
+                }
+                if (clubs[i].trim() === "Ajax") {
+                    css = "src='../content/club/ajax.png'";
+                }
+                if (clubs[i].trim() === "Bayern") {
+                    css = "src='../content/club/bayern.png'";
+                }
+                if (clubs[i].trim() === "PSG") {
+                    css = "src='../content/club/psg.png'";
+                }
+                 if (clubs[i].trim() === "Napoli") {
+                    css = "src='../content/club/napoli.png'";
+                }
+                if (clubs[i].trim() === "Atletico") {
+                    css = "src='../content/club/atletico.png'";
+                } 
+                if (clubs[i].trim() === "Juventus") {
+                    css = "src='../content/club/Juventus.png'";
+                }
+                if (clubs[i].trim() === "Aston") {
+                    css = "src='../content/club/aston.png'";
+                }
+                if (clubs[i].trim() === "Inter") {
+                    css = "src='../content/club/Inter.png'";
+                }
+                if (clubs[i].trim() === "Fiorentina") {
+                    css = "src='../content/club/fiorentina.png'";
+                }
+                 if (clubs[i].trim() === "Benfica") {
+                    css = "src='../content/club/benfica.png'";
+                }
+                strhtml += "<span  style='margin-right:5px'><img class='k-text-center' " + css + " width='40' /></span>";
+               //  strhtml += "<span " + css + " style='margin-right:5px'>" + clubs[i].trim() + "</span>";
+              }
+            return strhtml;
+        }
+
     }
     IgetVehicleNumberHistory();
 

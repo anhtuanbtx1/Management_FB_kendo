@@ -14,5 +14,6 @@ namespace Core_Db.Domains
         public string Face { get; set; }
         public string Country { get; set; }
         public int? Rating { get; set; }
+        public int? Status { get; set; }
     }
 }

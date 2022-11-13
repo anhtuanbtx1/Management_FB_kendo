@@ -1,4 +1,5 @@
-﻿using Core_Db.Interface;
+﻿using Core_Db.Domains;
+using Core_Db.Interface;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -15,6 +16,14 @@ namespace KendoDemoTest.Controllers
         {
             var user = mUserRepository.GetAll().ToList();
             return Json(user);
+        }
+
+        [HttpPost]
+        public ActionResult Create([FromQuery] User user)
+        {
+            mUserRepository.Insert(user);
+            mUserRepository.SaveChanges();
+            return View();
         }
     }
 }

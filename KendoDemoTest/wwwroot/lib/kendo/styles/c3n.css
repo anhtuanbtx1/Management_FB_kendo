@@ -37398,7 +37398,7 @@ kendo-scheduler .k-recurrence-editor {
 }
 
 .k-timeline .k-timeline-card .k-card-header {
-    background-color: #1e2a38;
+    background-color: #867c2e;
     color: #ffffff;
 }
 
@@ -39773,7 +39773,11 @@ li div.k-animation-container{
     }
 
     .stat-icon.custom-color-green {
-        background: #55ce63 !important;
+        background: #55ce63;
+    }
+
+    .stat-icon.custom-color-yellow {
+        background: #ffd700;
     }
 
     .stat-icon.custom-color-navy-blue {
@@ -39783,4 +39787,8 @@ li div.k-animation-container{
 
     .stat-icon.custom-color-gray {
         background: gray;
+    }
+
+    .stat-icon.custom-color-purple {
+        background: purple;
     }
