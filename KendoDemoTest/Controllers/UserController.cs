@@ -14,7 +14,7 @@ namespace KendoDemoTest.Controllers
         }
         public JsonResult GetUser()
         {
-            var user = mUserRepository.GetAll().ToList();
+            var user = mUserRepository.GetAll().OrderBy(p=>p.Name).ToList();
             return Json(user);
         }
 

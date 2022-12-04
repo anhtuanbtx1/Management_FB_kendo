@@ -238,7 +238,7 @@
                 messages: {
                     display: "{0}-{1} của {2} dòng",
                 },
-                pageSizes: [10, 20, 50],
+                pageSizes: [10, 50, 100],
             },
                 sortable: true,
                 //navigatable: true,
@@ -259,7 +259,7 @@
                     field: "face",
                     title: "Khuôn mặt",
                     headerAttributes: { style: "text-align: center; justify-content: center" },
-                    template: "<div class='k-text-center'><img src='../content/face/#: data.name#.png' alt='#: data.name#' title='#: data.name#' width='50' /></div>",
+                    template: "<div class='k-text-center'><img src='../content/face/#: data.face#.png' alt='#: data.name#' title='#: data.name#' width='70' /></div>",
                     width: 130
                 },
                 {
@@ -368,7 +368,7 @@
             if (number == 7 || number == 10 || number == 11 || number == 9 || number == 20) {
                 strhtml1 = "<span id='badge_" + item.name + "' class='stat-icon custom-color-red' style='margin-right:5px'>" + number + "</span>";
            }
-            if (number == 8 || number == 17 || number == 34 || number == 13 || number == 16 || number == 22) {
+            if (number == 8 || number == 6 || number == 14 || number == 18 || number == 17 || number == 34 || number == 13 || number == 16 || number == 22 || number == 21) {
                 strhtml1 = "<span id='badge_" + item.name + "' class='stat-icon custom-color-green' style='margin-right:5px'>" + number + "</span>";
             }
             if (number == 1) {
@@ -467,6 +467,13 @@
                 }
                  if (clubs[i].trim() === "Benfica") {
                     css = "src='../content/club/benfica.png'";
+                }
+                 if (clubs[i].trim() === "Roma") {
+                    css = "src='../content/club/roma.png'";
+                }if (clubs[i].trim() === "Valencia") {
+                    css = "src='../content/club/valencia.png'";
+                }if (clubs[i].trim() === "Sevilla") {
+                    css = "src='../content/club/sevilla.png'";
                 }
                 strhtml += "<span  style='margin-right:5px'><img class='k-text-center' " + css + " width='40' /></span>";
                //  strhtml += "<span " + css + " style='margin-right:5px'>" + clubs[i].trim() + "</span>";
